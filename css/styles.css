@@ -163,9 +163,19 @@ a{
   width: 40px;
 }
 
+.icon--small{
+  height: 30px;
+  width: 30px;
+}
+
 .icon--primary{
   fill: var(--color-primary);
 }
+
+.icon--white{
+  fill: #fff;
+}
+
 
 .icon-container{
   background: #f3f9fa;
@@ -175,6 +185,10 @@ a{
   width: 64px;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container--accent{
+  background: var(--color-accent);
 }
 
 /*   Button   */
@@ -217,6 +231,11 @@ a{
 
 .btn--accent:hover{
   background: #ec3000;
+}
+
+.btn--stretched{
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .btn--block{
@@ -375,7 +394,8 @@ a{
   margin: 0 2rem;
 }
 
-.media__image{
+.media__image
+{
   margin: 1rem;
 }
 
@@ -443,5 +463,76 @@ a{
 @media screen and (min-width:1024px) {
   .grid--col-3{
     grid-template-columns: repeat(3,1fr);
+  }
+}
+
+/*   Testimonial   */
+
+.testimonial{
+  padding: 3rem;
+}
+
+.testimonial_image{
+  position: relative;
+}
+
+.testimonial_image > img{
+  width: 100%;
+}
+
+.testimonial_image > .icon-container{
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width:768px){
+  .testimonial .quote,
+  .testimonial .quote__author{
+    font-size: 2.4rem;
+  }
+  .testimonial .quote{
+    margin-left: 6rem;
+  }
+}
+
+/*  Callout  */ 
+
+.callout{
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary{
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.callout__heading{
+  color: #fff;
+  font-size: 3rem;
+}
+
+.callout .btn{
+  justify-self: center;
+  align-self: center;
+}
+
+.callout__content{
+  text-align: center;
+}
+
+@media screen and (min-width:768px) {
+  .callout .grid--col-2{
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content{
+    text-align: left;
+  }
+
+  .callout .btn{
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
